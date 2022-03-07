@@ -1,8 +1,9 @@
 //Constantes
 const a = 10;
-const b = 20;
+const b = -10;
 const c = 150;
 const d = 0;
+const resultadoTriangulo = 180;
 
 //Programas
 
@@ -49,4 +50,13 @@ if(d > 0){
   console.log(d, "is negative");
 }else{
   console.log(d, 'is zero');
+}
+
+//Verificar se é triângulo
+if(a + b + c == resultadoTriangulo && a > 0 && b > 0 && c > 0) {
+  console.log("É um triangulo");
+}else if(a < 0 || b < 0 || c < 0){
+  console.log("Um dos valores está negativo");
+}else {
+  console.log("Não é um triangulo");
 }
