@@ -2,6 +2,7 @@
 const a = 10;
 const b = 20;
 const c = 150;
+const d = 0;
 
 //Programas
 
@@ -39,4 +40,13 @@ if(a > b == true && a > c == true) {
   console.log("O maior número é:", b);
 }else {
   console.log("O maior número é:", c);
+}
+
+//Positive, negative e zero
+if(d > 0){
+  console.log(d, "is positive");
+}else if(d < 0){
+  console.log(d, "is negative");
+}else{
+  console.log(d, 'is zero');
 }
