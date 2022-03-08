@@ -5,9 +5,15 @@ const c = 6;
 const d = 0;
 const resultadoTriangulo = 180;
 const peca = "Principe";
+const valor = 54;
+const valorVenda = 87;
+const valorCustoTotal = valor + (valor * 0.20);
+const lucro = valorVenda - valorCustoTotal;
+const quantidadeProdutos = 1000;
+
 
 //Programas
-
+/*Operadores Básicos
 //Adição
 const soma = a + b;
 console.log("Resultado da soma é:", soma);
@@ -27,15 +33,17 @@ console.log("Resultado da divisão é:", divisao);
 //Módulo
 const resto = a % b;
 console.log("Resultado do resto é:", resto);
+*/
 
-//Retornar o maior entre dois números
+/*//Retornar o maior entre dois números
 if(a > b == true) {
   console.log(a);
 }else {
   console.log(b);
 }
+*/
 
-//Retornar maior de 3 números
+/*//Retornar maior de 3 números
 if(a > b == true && a > c == true) {
   console.log("O maior número é:", a);
 }else if(b > c == true) {
@@ -43,8 +51,9 @@ if(a > b == true && a > c == true) {
 }else {
   console.log("O maior número é:", c);
 }
+*/
 
-//Positive, negative e zero
+/*//Positive, negative e zero
 if(d > 0){
   console.log(d, "is positive");
 }else if(d < 0){
@@ -52,8 +61,9 @@ if(d > 0){
 }else{
   console.log(d, 'is zero');
 }
+*/
 
-//Verificar se é triângulo
+/*//Verificar se é triângulo
 if(a + b + c == resultadoTriangulo && a > 0 && b > 0 && c > 0) {
   console.log("É um triangulo");
 }else if(a < 0 || b < 0 || c < 0){
@@ -62,7 +72,9 @@ if(a + b + c == resultadoTriangulo && a > 0 && b > 0 && c > 0) {
   console.log("Não é um triangulo");
 }
 
-//Peça de xadrez
+*/
+
+/*//Peça de xadrez
 
 switch (peca.toLowerCase()) {
   case "peão":
@@ -77,8 +89,9 @@ switch (peca.toLowerCase()) {
     default:
       console.log(peca[0].toUpperCase() + peca.slice(1).toLowerCase(), "não é uma peça de xadrez!");
 }
+*/
 
-//Conversor de notas
+/*//Conversor de notas
 if(a >= 90 && a <= 100) {
   console.log("Nota A");
 }else if(a >= 80 && a < 90){
@@ -94,18 +107,24 @@ if(a >= 90 && a <= 100) {
 }else {
   console.log("Nota F");
 }
+*/
 
-
-//Verificar se existe algum par.
+/*//Verificar se existe algum par.
 if(a % 2 == 0 || b % 2 == 0 || c % 2 == 0){
   console.log("Um dos números é par");
 }else{
   console.log("Nenhum dos números é par");
 }
+*/
 
-//Verificar se existe algum impar.
+/*//Verificar se existe algum impar.
 if(a % 2 > 0 || b % 2 > 0 || c % 2 > 0){
   console.log("Um dos números é impar");
 }else{
   console.log("Nenhum dos números é impar");
 }
+*/
+
+/*//Calcular lucro de produtos
+console.log("O lucro da venda será de:", lucro * quantidadeProdutos);
+*/
