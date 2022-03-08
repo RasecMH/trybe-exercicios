@@ -4,6 +4,7 @@ const b = -10;
 const c = 150;
 const d = 0;
 const resultadoTriangulo = 180;
+const peca = "Principe";
 
 //Programas
 
@@ -59,4 +60,20 @@ if(a + b + c == resultadoTriangulo && a > 0 && b > 0 && c > 0) {
   console.log("Um dos valores está negativo");
 }else {
   console.log("Não é um triangulo");
+}
+
+//Peça de xadrez
+
+switch (peca.toLowerCase()) {
+  case "peão":
+    console.log("Move uma para frente");
+    break;
+  case "torre":
+    console.log("Move para frente e para os lados");
+    break;
+  case "rainha":
+    console.log("Move para todas as direções");
+    break;
+    default:
+      console.log(peca[0].toUpperCase() + peca.slice(1).toLowerCase(), "não é uma peça de xadrez!");
 }
