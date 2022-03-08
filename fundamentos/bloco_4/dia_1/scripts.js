@@ -1,5 +1,5 @@
 //Constantes
-const a = 10;
+const a = 90;
 const b = -10;
 const c = 150;
 const d = 0;
@@ -76,4 +76,21 @@ switch (peca.toLowerCase()) {
     break;
     default:
       console.log(peca[0].toUpperCase() + peca.slice(1).toLowerCase(), "não é uma peça de xadrez!");
+}
+
+//Conversor de notas
+if(a >= 90 && a <= 100) {
+  console.log("Nota A");
+}else if(a >= 80 && a < 90){
+  console.log("Nota B");
+}else if(a >= 70 && a < 80){
+  console.log("Nota C");
+}else if(a >= 60 && a < 70){
+  console.log("Nota D");
+}else if(a >= 50 && a < 60){
+  console.log("Nota E");
+}else if(a > 100 || a < 0){
+  console.log("Nota incorreta")
+}else {
+  console.log("Nota F");
 }
