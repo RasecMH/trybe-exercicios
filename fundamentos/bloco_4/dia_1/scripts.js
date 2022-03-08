@@ -1,7 +1,7 @@
 //Constantes
-const a = 90;
-const b = -10;
-const c = 150;
+const a = 1;
+const b = 3;
+const c = 5;
 const d = 0;
 const resultadoTriangulo = 180;
 const peca = "Principe";
@@ -93,4 +93,12 @@ if(a >= 90 && a <= 100) {
   console.log("Nota incorreta")
 }else {
   console.log("Nota F");
+}
+
+
+//Verificar se existe algum par.
+if(a % 2 == 0 || b % 2 == 0 || c % 2 == 0){
+  console.log("Um dos números é par");
+}else{
+  console.log("Nenhum dos números é par");
 }
