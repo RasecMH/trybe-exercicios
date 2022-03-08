@@ -1,7 +1,7 @@
 //Constantes
-const a = 1;
-const b = 3;
-const c = 5;
+const a = 2;
+const b = 4;
+const c = 6;
 const d = 0;
 const resultadoTriangulo = 180;
 const peca = "Principe";
@@ -101,4 +101,11 @@ if(a % 2 == 0 || b % 2 == 0 || c % 2 == 0){
   console.log("Um dos números é par");
 }else{
   console.log("Nenhum dos números é par");
+}
+
+//Verificar se existe algum impar.
+if(a % 2 > 0 || b % 2 > 0 || c % 2 > 0){
+  console.log("Um dos números é impar");
+}else{
+  console.log("Nenhum dos números é impar");
 }
