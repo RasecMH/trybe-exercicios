@@ -24,3 +24,13 @@ if (mediaAri > 20) {
 }else {
   console.log('Valor menor que 20');
 }
+
+//Verificar o maior valor contido no array
+let maiorNumero = numbers[0];
+for (let i2 = 1; i2 < numbers.length; i2+=1) {
+  if(maiorNumero < numbers[i2]){
+    maiorNumero = numbers[i2]
+  }
+  
+}
+console.log(maiorNumero)
