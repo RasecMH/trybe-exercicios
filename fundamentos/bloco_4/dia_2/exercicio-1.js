@@ -1,6 +1,7 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let soma = 0;
 
+
 // Imprimir os valores contidos no array
 for (const numeros of numbers) {
   console.log(numeros);
@@ -12,3 +13,7 @@ for (let index = 0; index < numbers.length; index++) {
 }
 
 console.log(soma);
+
+// Média aritmética de todos os valores
+let mediaAri = soma / numbers.length;
+console.log(mediaAri);
