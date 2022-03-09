@@ -57,3 +57,11 @@ for (let i4 = 1; i4 < numbers.length; i4 += 1) {
 }
 console.log('O menor número do array é:', menorNumero)
 
+//Criar um array do 1 ao 25 com for
+let arrayNumeros = [];
+
+for(let x = 1; x <= 25; x+=1){
+  arrayNumeros.push(x);
+}
+console.log('Novo array contém os seguintes valores:');
+console.log(arrayNumeros);
