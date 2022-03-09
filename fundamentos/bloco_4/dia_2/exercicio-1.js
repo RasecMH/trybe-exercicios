@@ -17,3 +17,10 @@ console.log(soma);
 // Média aritmética de todos os valores
 let mediaAri = soma / numbers.length;
 console.log(mediaAri);
+
+//Caso a média aritmética seja maior que 20 imprimir
+if (mediaAri > 20) {
+  console.log('Valor maior que 20');
+}else {
+  console.log('Valor menor que 20');
+}
