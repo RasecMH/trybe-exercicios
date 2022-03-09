@@ -3,6 +3,7 @@ let soma = 0;
 
 
 // Imprimir os valores contidos no array
+console.log('Os valores do array são:');
 for (const numeros of numbers) {
   console.log(numeros);
 }
@@ -12,17 +13,17 @@ for (let index = 0; index < numbers.length; index++) {
   soma += numbers[index];
 }
 
-console.log(soma);
+console.log('A soma de todos os valores é:', soma);
 
 // Média aritmética de todos os valores
 let mediaAri = soma / numbers.length;
-console.log(mediaAri);
+console.log('A média aritmética é:', mediaAri);
 
 //Caso a média aritmética seja maior que 20 imprimir
 if (mediaAri > 20) {
-  console.log('Valor maior que 20');
+  console.log('Valor acima é maior que 20');
 }else {
-  console.log('Valor menor que 20');
+  console.log('Valor acima é menor que 20');
 }
 
 //Verificar o maior valor contido no array
@@ -33,4 +34,15 @@ for (let i2 = 1; i2 < numbers.length; i2+=1) {
   }
   
 }
-console.log(maiorNumero)
+console.log('O maior número do array é:', maiorNumero)
+
+// Descobrir quantos impares tem no array
+let totalImpares = 0;
+
+for(let i3 = 0; i3 < numbers.length; i3+=1){
+  if(numbers[i3] % 2 != 0){
+    totalImpares += 1;
+  }
+}
+
+console.log('O total de números impares é:', totalImpares);
