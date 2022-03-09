@@ -65,3 +65,11 @@ for(let x = 1; x <= 25; x+=1){
 }
 console.log('Novo array contém os seguintes valores:');
 console.log(arrayNumeros);
+
+//Dividir o array criado por 2 em cada elemento
+
+console.log('A divisão por 2 de cada valor do array é:');
+
+for(z = 0; z < arrayNumeros.length; z+=1){
+  console.log(arrayNumeros[z] / 2);
+}
