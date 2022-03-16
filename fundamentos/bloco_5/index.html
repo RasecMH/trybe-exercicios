@@ -59,20 +59,72 @@
     <script>
       let body = document.getElementsByTagName('body')[0];
       h1 = document.createElement('h1');
-      h1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      h1.className = 'title';
       body.appendChild(h1);
 
-      main = document.createElement('main');
+      let main = document.createElement('main');
       main.className = 'main-content';
       body.appendChild(main);
 
-      section1 = document.createElement('section');
+      let section1 = document.createElement('section');
       section1.className = 'center-content';
       body.lastElementChild.appendChild(section1);
 
-      paragraph = document.createElement('p');
+      let paragraph = document.createElement('p');
       paragraph.innerText = 'Algum texto';
       body.lastElementChild.firstElementChild.appendChild(paragraph);
+
+      let section2 = document.createElement('section');
+      section2.className = 'left-content';
+      body.lastElementChild.appendChild(section2);
+
+      let section3 = document.createElement('section');
+      section3.className = 'right-content';
+      section3.style.marginRight = 'auto';
+      body.lastElementChild.appendChild(section3);
+
+      let image = document.createElement('img');
+      image.src = 'https://picsum.photos/200';
+      image.className = 'small-image';
+      body.lastElementChild.firstElementChild.nextElementSibling.appendChild(image);
+
+      let list = document.createElement('ul');
+      
+      body.lastElementChild.lastElementChild.appendChild(list);
+
+      
+      let number = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+      for(i = 0; i < number.length; i += 1){
+        let listItem = document.createElement('li');
+        listItem.innerText = number[i];
+        body.lastElementChild.lastElementChild.firstElementChild.appendChild(listItem);
+      }
+
+      for(i = 1; i <= 3; i += 1){
+        let h3 = document.createElement('h3');
+        h3.className = 'description';
+        body.lastElementChild.appendChild(h3);
+      }
+      
+      let main2 = body.lastElementChild;
+      main2.removeChild(main2.firstElementChild.nextElementSibling);
+
+      let paiSection1 = body.lastElementChild.firstElementChild;
+      paiSection1.style.backgroundColor = 'green';
+
+      let listContent = body.lastElementChild.firstElementChild.nextElementSibling.firstElementChild;
+      console.log(listContent);
+      listContent.removeChild(listContent.lastElementChild);
+      listContent.removeChild(listContent.lastElementChild);
+
+
+
+
+
+      
+      
+
     </script>
   </body>
 </html>
