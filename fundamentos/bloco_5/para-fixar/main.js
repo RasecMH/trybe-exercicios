@@ -8,13 +8,11 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 1. Copie esse arquivo e edite apenas ele;
 // 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
 // 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
-
+techAtual = document.getElementsByClassName('tech');
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 function selecionado(event){
-  techAtual = document.getElementsByClassName('tech');
   techAtual[0].classList.remove('tech')
-  console.log(techAtual);
   event.target.className = 'tech';
 }
 
@@ -25,7 +23,6 @@ thirdLi.addEventListener('click', selecionado);
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 function textoDigitado(event){
-  techAtual = document.getElementsByClassName('tech');
   techAtual[0].innerText = input.value;
 }
 
@@ -42,6 +39,12 @@ myWebpage.addEventListener('dblclick', cliqueDuplo);
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+function alterarCor(event){
+  event.target.style.color = 'red';
+}
+
+myWebpage.addEventListener('mouseover', alterarCor);
 
 // Segue abaixo um exemplo do uso de event.target:
 
