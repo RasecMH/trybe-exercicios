@@ -22,6 +22,13 @@ function addDiasList(array) {
     let item = document.createElement('li');
     item.innerText = array[i];
     item.className = 'day';
+    if (array[i] === 24 || array[i] === 25 || array[i] === 31) {
+      item.className += ' holiday'
+    }
+    if (array[i] === 4 || array[i] === 11 || array[i] === 18 || array[i] === 25) {
+      item.className += ' friday';
+    }
+
 
     diasList.appendChild(item);
   }
@@ -29,3 +36,30 @@ function addDiasList(array) {
 
 addDiasList(dezDaysList);
 
+let btnContainer = document.getElementsByClassName('buttons-container')[0];
+
+function addFeirados(Feriados) {
+  let feriadoItem = document.createElement('button');
+  feriadoItem.className = 'btn-holiday';
+  feriadoItem.innerText = Feriados;
+
+  btnContainer.appendChild(feriadoItem);
+}
+
+addFeirados('Feriados');
+
+let btnFeriado = document.getElementsByClassName('btn-holiday');
+let feriadoItens = document.getElementsByClassName('holiday');
+
+function btnFeriados() {
+  for (i = 0; i < feriadoItens.length; i += 1) {
+    if (feriadoItens[i].style.backgroundColor == 'blue') {
+      feriadoItens[i].style.backgroundColor = 'rgb(238,238,238)';
+    } else {
+      feriadoItens[i].style.backgroundColor = 'blue';
+    }
+  }
+}
+
+
+btnFeriado[0].addEventListener('click', btnFeriados);
