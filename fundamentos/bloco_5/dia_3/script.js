@@ -77,13 +77,13 @@ addFridays('Sexta-feira');
 let btnFriday = document.getElementsByClassName('btn-friday');
 console.log(btnFriday);
 let fridayItens = document.getElementsByClassName('friday');
-
+let arrayFriday = [4,11,18,25];
 function btnFridays() {
   for (i = 0; i < fridayItens.length; i += 1) {
-    if (fridayItens[i].style.backgroundColor == 'red') {
-      fridayItens[i].style.backgroundColor = 'rgb(238,238,238)';
+    if (fridayItens[i].innerText !== 'Sextou!') {
+      fridayItens[i].innerText = 'Sextou!';
     } else {
-      fridayItens[i].style.backgroundColor = 'red';
+      fridayItens[i].innerText = arrayFriday[i];
     }
   }
 }
@@ -127,11 +127,14 @@ addTarefa('Trabalhar', 'blue');
 let taskSelected = document.getElementsByClassName('task');
 
 function selecionarTask(Event){
+  let taskAtual = document.getElementsByClassName('task selected')[0];
+  taskAtual.className = 'task'
   if(Event.target.className === 'task selected'){
     Event.target.className = 'task';
   }else {
     Event.target.className = 'task selected';
   }
+  
 }
 
 for(i = 0; i < taskSelected.length; i += 1){
@@ -152,3 +155,18 @@ for (i = 0; i < dayItem.length; i += 1) {
   dayItem[i].addEventListener('click', legendaSelecionada);
 }
 
+let btnAdd = document.getElementById('btn-add');
+let input = document.getElementById('input');
+
+
+function addCompromissoClick(){
+  addCompromisso();
+  function addCompromisso(){
+    let inputText = document.createElement('span');
+    inputText.innerText = input.value; 
+
+    input.appendChild(inputText);
+  }
+}
+
+btnAdd.addEventListener('click', addCompromissoClick);
