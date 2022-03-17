@@ -63,3 +63,13 @@ function btnFeriados() {
 
 
 btnFeriado[0].addEventListener('click', btnFeriados);
+
+function addFridays(friday) {
+  let fridayItem = document.createElement('button');
+  fridayItem.className = 'btn-friday';
+  fridayItem.innerText = friday;
+
+  btnContainer.appendChild(fridayItem);
+}
+
+addFeirados('Sexta-feira');
