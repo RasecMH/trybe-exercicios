@@ -127,12 +127,11 @@ addTarefa('Trabalhar', 'blue');
 let taskSelected = document.getElementsByClassName('task');
 
 function selecionarTask(Event){
-  let taskAtual = document.getElementsByClassName('task selected')[0];
-  taskAtual.className = 'task'
-  if(Event.target.className === 'task selected'){
-    Event.target.className = 'task';
-  }else {
+  let taskAtual = document.getElementsByClassName('task selected');
+  if(taskAtual.length === 0){
     Event.target.className = 'task selected';
+  }else {
+    Event.target.className = 'task';
   }
   
 }
@@ -156,17 +155,40 @@ for (i = 0; i < dayItem.length; i += 1) {
 }
 
 let btnAdd = document.getElementById('btn-add');
-let input = document.getElementById('input');
+let input = document.getElementById('task-input');
+let listTask = document.getElementsByClassName('task-list')[0];
 
 
 function addCompromissoClick(){
   addCompromisso();
   function addCompromisso(){
-    let inputText = document.createElement('span');
+    if(input.value.length <= 0){
+      alert('Error: Digite ao menos 1 caractere')
+    }
+    let inputText = document.createElement('li');
     inputText.innerText = input.value; 
 
-    input.appendChild(inputText);
+    listTask.appendChild(inputText);
+    input.value = '';
+    
   }
 }
 
+
+  function addCompromisso(Event){
+    if(Event.key === 'Enter'){
+      if(input.value.length <= 0){
+        alert('Error: Digite ao menos 1 caractere')
+      }
+    let inputText = document.createElement('li');
+    inputText.innerText = input.value; 
+
+    listTask.appendChild(inputText);
+    input.value = '';
+    
+    }
+  }
+
+
 btnAdd.addEventListener('click', addCompromissoClick);
+input.addEventListener('keyup', addCompromisso);
