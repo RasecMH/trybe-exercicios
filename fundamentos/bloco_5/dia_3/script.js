@@ -72,4 +72,83 @@ function addFridays(friday) {
   btnContainer.appendChild(fridayItem);
 }
 
-addFeirados('Sexta-feira');
+addFridays('Sexta-feira');
+
+let btnFriday = document.getElementsByClassName('btn-friday');
+console.log(btnFriday);
+let fridayItens = document.getElementsByClassName('friday');
+
+function btnFridays() {
+  for (i = 0; i < fridayItens.length; i += 1) {
+    if (fridayItens[i].style.backgroundColor == 'red') {
+      fridayItens[i].style.backgroundColor = 'rgb(238,238,238)';
+    } else {
+      fridayItens[i].style.backgroundColor = 'red';
+    }
+  }
+}
+
+
+btnFriday[0].addEventListener('click', btnFridays);
+
+let dayItem = document.getElementsByClassName('day');
+
+function zoomIn(event) {
+  event.target.style.fontSize = '30px'
+}
+
+function zoomOut(event) {
+  event.target.style.fontSize = '20px'
+}
+
+for (i = 0; i < dayItem.length; i += 1) {
+  dayItem[i].addEventListener('mouseover', zoomIn);
+  dayItem[i].addEventListener('mouseout', zoomOut);
+}
+
+
+let tarefas = document.getElementsByClassName('my-tasks')[0];
+
+function addTarefa(String, Cor){
+  let novaTarefa = document.createElement('span');
+  novaTarefa.innerText = String;
+  tarefas.appendChild(novaTarefa);
+
+  let novaLegenda = document.createElement('div');
+  novaLegenda.className = 'task';
+  novaLegenda.style.backgroundColor = Cor;
+  tarefas.appendChild(novaLegenda);
+  
+}
+
+addTarefa('Estudar', 'red');
+addTarefa('Trabalhar', 'blue');
+
+let taskSelected = document.getElementsByClassName('task');
+
+function selecionarTask(Event){
+  if(Event.target.className === 'task selected'){
+    Event.target.className = 'task';
+  }else {
+    Event.target.className = 'task selected';
+  }
+}
+
+for(i = 0; i < taskSelected.length; i += 1){
+  taskSelected[i].addEventListener('click', selecionarTask);
+}
+
+function legendaSelecionada(Event){
+  let taskSelec = document.getElementsByClassName('task selected')[0];
+  if(Event.target.style.color === taskSelec.style.backgroundColor){
+    Event.target.style.color = 'rgb(119,119,119)';
+  }else{
+    Event.target.style.color = taskSelec.style.backgroundColor;
+  }
+  
+}
+
+for (i = 0; i < dayItem.length; i += 1) {
+  dayItem[i].addEventListener('click', legendaSelecionada);
+}
+
