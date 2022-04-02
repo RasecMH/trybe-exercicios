@@ -1,0 +1,32 @@
+<!-- Para fixar -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragrafo">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragrafo">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+
+      const title = document.getElementById('page-title');
+      title.innerText = 'Donnie Darko';
+
+      const paragraph2 = document.getElementById('second-paragraph');
+      paragraph2.innerText = 'Dizem que é um filme complexo de entender...'
+
+      const subtitle = document.getElementById('subtitle');
+      subtitle.innerText = 'Quantas vezes preciso assistir?'
+
+      const paragrafo = document.getElementsByClassName('paragrafo');
+      paragrafo[0].style.color = 'blue';
+
+      const subtitulo = document.getElementsByTagName('h4');
+      subtitulo[0].style.color = 'brown';
+    </script>
+  </body>
+</html>
