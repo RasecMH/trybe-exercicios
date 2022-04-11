@@ -1,0 +1,57 @@
+<main id="paiDoPai">
+  <section id="pai">
+    <section id="primeiroFilho"></section>
+    <section id="elementoOndeVoceEsta">
+      <section id="primeiroFilhoDoFilho"></section>
+      <section id="segundoEUltimoFilhoDoFilho"></section>
+    </section>
+    Atenção!
+    <section id="terceiroFilho"></section>
+    <section id="quartoEUltimoFilho"></section>
+  </section>
+</main>
+
+<script>
+  let pai = document.getElementById('pai');
+  console.log(pai.firstElementChild);
+  pai.removeChild(pai.firstElementChild);
+  console.log(pai.firstElementChild.nextSibling);
+  pai.removeChild(pai.firstElementChild.nextSibling);
+  pai.removeChild(pai.firstElementChild.nextElementSibling);
+  pai.removeChild(pai.lastElementChild);
+
+  let ondeEstou = document.getElementById('elementoOndeVoceEsta');
+  ondeEstou.removeChild(ondeEstou.lastElementChild);
+  
+  
+     /*
+   let ondeEstou = document.getElementById('elementoOndeVoceEsta');
+ 
+   ondeEstou.parentNode.style.color = 'red';
+ 
+   let primeiroFilho = document.querySelector('#primeiroFilhoDoFilho');
+   primeiroFilho.innerText = 'teste'
+   primeiroFilho.appendChild(document.createElement('section'));
+   console.log(primeiroFilho.lastElementChild.parentNode.parentNode.nextElementSibling);
+ 
+   let pai = document.querySelector('#pai');
+   primeiroFilho = pai.firstElementChild;
+   primeiroFilho.innerText = 'Acesse o primeiroFilho a partir de pai .'
+   
+   let primeiroFilho2 = ondeEstou.previousElementSibling;
+   primeiroFilho2.innerText = 'Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .'
+ 
+   let atention = ondeEstou.nextSibling;
+   console.log(atention);
+ 
+   let terceiroFilho = ondeEstou.nextElementSibling;
+   console.log(terceiroFilho);
+ 
+   console.log(pai.lastElementChild.previousElementSibling);
+ 
+   ondeEstou.parentNode.appendChild(document.createElement('section'))
+   ondeEstou.appendChild(document.createElement('section'));
+   */ 
+
+
+</script>
