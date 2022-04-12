@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#text {
+  text-align: center;
+  font-size: 8px;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  max-height: 40vh;
+}
+
+#btn-container {
+  height: 6vh;
+  max-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+#font-size,
+#font-space,
+#font-color {
+  height: 100%;
+  max-width: 70px;
+  margin: 5px;
+}
+
+#darkmode-btn,
+#color-btn {
+  height: 100%;
+  margin: 5px;
+}
+
+#darkmode-btn {
+  background-color: black;
+  border: 0px solid grey;
+  border-radius: 5%;
+  color: white;
+}
