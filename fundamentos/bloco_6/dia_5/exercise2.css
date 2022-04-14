@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem 1.5rem;
+}
+
+header p, h2, h1, h3 {
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.8rem;
+  }
+  .info-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  body {
+    font-size: 2.4rem;
+    margin: 0 6rem;
+  }
+}
